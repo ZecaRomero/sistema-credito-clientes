@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>897</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Relatório de Clientes</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="headerLayout">
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #37474F;</string>
+        </property>
+        <property name="text">
+         <string>Relatório de Clientes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+      <spacer name="headerSpacer">
+    <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="sizeHint" stdset="0">
+        <size>
+            <width>40</width>
+            <height>20</height>
+        </size>
+    </property>
+</spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEditar">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #81C784;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;
+}
+
+QPushButton:pressed {
+    background-color: #43A047;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Editar Cliente</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExcluir">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #E57373;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:hover {
+    background-color: #EF5350;
+}
+
+QPushButton:pressed {
+    background-color: #D32F2F;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Excluir Cliente</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="tableFrame">
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    border: 1px solid #B0BEC5;
+    border-radius: 8px;
+    margin-top: 10px;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="frameLayout">
+       <item>
+        <widget class="QTableWidget" name="tableClientes">
+         <property name="styleSheet">
+          <string notr="true">QTableWidget {
+    border: none;
+    font-size: 14px;
+    background-color: #ECEFF1;
+    selection-background-color: #CFD8DC;
+    selection-color: #37474F;
+}
+
+QHeaderView::section {
+    background-color: #B0BEC5;
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 2px solid #90A4AE;
+}
+
+QTableWidget::item {
+    padding: 8px;
+}
+
+QTableWidget::item:selected {
+    color: #263238;
+}
+
+QTableWidget::alternate-background-color {
+    background-color: #E0F2F7;
+}</string>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nome</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>CPF</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Idade</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Renda</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Situação</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Data Cadastro</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Observações</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Data Atualização</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>897</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

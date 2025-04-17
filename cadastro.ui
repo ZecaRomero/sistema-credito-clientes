@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Análise de Crédito</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #424242;
+        background-color: #f5f5f5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 20px;
+    padding: 0 15px;
+    background-color: #e0e0e0;
+    border-radius: 6px;
+}</string>
+      </property>
+      <property name="title">
+       <string>Dados do Cliente: </string>
+      </property>
+      <layout class="QGridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_id">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtId">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Nome:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="txtNome">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>CPF:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="txtCpf">
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+         <property name="inputMask">
+          <string>000.000.000-00</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Idade:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QSpinBox" name="txtIdade">
+         <property name="styleSheet">
+          <string notr="true">QSpinBox {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QSpinBox:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+         <property name="minimum">
+          <number>18</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>18</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Renda (R$):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QDoubleSpinBox" name="txtRenda">
+         <property name="styleSheet">
+          <string notr="true">QDoubleSpinBox {
+    padding: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QDoubleSpinBox:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+         <property name="prefix">
+          <string>R$ </string>
+         </property>
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>999999.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Situação:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="txtSituacao">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #212121;
+    text-align: center;
+}</string>
+         </property>
+         <property name="text">
+          <string>NÃO ANALISADO</string>
+         </property>
+         <property name="alignment">
+          <set>AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <!-- NOVOS CAMPOS ADICIONADOS AQUI -->
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Data Cadastro:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QDateTimeEdit" name="txtDataCadastro">
+         <property name="styleSheet">
+          <string notr="true">QDateTimeEdit {
+    padding: 8px;
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+}
+
+QDateTimeEdit:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QLabel" name="label_7">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Observações:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="2">
+        <widget class="QTextEdit" name="txtObs">
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+    border: 1px solid #bdbdbd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fafafa;
+    color: #424242;
+    padding: 5px;
+}
+
+QTextEdit:focus {
+    border: 2px solid #1e88e5;
+    background-color: #fff;
+}</string>
+         </property>
+         <property name="maximumHeight">
+          <number>80</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnAnalisar">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #42a5f5, stop:1 #64b5f6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1e88e5, stop:1 #42a5f5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1565c0, stop:1 #2979ff);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Analisar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSalvar">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #66bb6a, stop:1 #81c784);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #4caf50, stop:1 #66bb6a);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #388e3c, stop:1 #43a047);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Salvar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRelatorio">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ffa726, stop:1 #ffb74d);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #fb8c00, stop:1 #ffa726);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ef6c00, stop:1 #f57c00);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Relatório</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLimpar">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <fontweight>Medium</fontweight>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #e57373, stop:1 #ef9a9a);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #d32f2f, stop:1 #e57373);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #c62828, stop:1 #d32f2f);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}</string>
+        </property>
+        <property name="text">
+         <string>Limpar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tabelaClientes">
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    alternate-background-color: #f0f0f0;
+    selection-background-color: #bbdefb;
+    selection-color: #212121;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+QHeaderView::section {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    color: #424242;
+}
+
+QTableWidget::item {
+    padding: 8px;
+}
+
+QTableWidget::item:selected {
+    background-color: #bbdefb;
+    color: #212121;
+}</string>
+      </property>
+      <column>
+       <property name="text">
+        <string>Nome</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CPF</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Idade</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Renda</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Situação</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar {
+    background-color: #f0f0f0;
+    color: #424242;
+    padding: 5px;
+    font-size: 12px;
+    border-top: 1px solid #e0e0e0;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
